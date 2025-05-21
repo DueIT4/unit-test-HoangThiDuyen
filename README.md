@@ -12,13 +12,13 @@
 
 ## Cấu trúc thư mục
 
+```plaintext
 project/
 ├── src/
-│ └── student_analyzer.py # Lớp chính xử lý phân tích điểm
+│   └── student_analyzer.py          # Lớp chính xử lý phân tích điểm
 ├── tests/
-│ └── test_student_analyzer.py # Unit test sử dụng unittest
-├── README.md # Tài liệu mô tả bài tập
-
+│   └── test_student_analyzer.py     # Unit test sử dụng unittest
+├── README.md                        # Tài liệu mô tả bài tập
 ## Cách chạy chương trình
 
 ### Yêu cầu
