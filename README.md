@@ -39,10 +39,10 @@ File test_student_analyzer.py sử dụng unittest để kiểm tra hai phương
 
 1. count_excellent_students(scores)
 Đếm số học sinh giỏi trong từng dạng danh sách test:
-test_count_excellent_students_mixed_valid_invalid	Danh sách có cả điểm hợp lệ và không hợp lệ
-test_count_excellent_students_empty_list	Danh sách rỗng
-test_count_excellent_students_all_valid	Tất cả điểm đều từ 8.0 trở lên
-test_count_excellent_students_edge_values	Giá trị biên như 0.0, 10.0, 8.0
+test_count_excellent_students_mixed_valid_invalid:	Danh sách có cả điểm hợp lệ và không hợp lệ
+test_count_excellent_students_empty_list:	Danh sách rỗng
+test_count_excellent_students_all_valid:	Tất cả điểm đều từ 8.0 trở lên
+test_count_excellent_students_edge_values:	Giá trị biên như 0.0, 10.0, 8.0
 
 2. calculate_valid_average(scores)
 Tính trung bình điểm trong từng dạng danh sách test:
