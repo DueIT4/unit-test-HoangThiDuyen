@@ -1,7 +1,7 @@
 from typing import List
 
-class StudentAnalyzer:
-    def countExcellentStudents(self, scores: List[float]) -> int:
+class student_analyzer:
+    def count_excellent_students(self, scores: List[float]) -> int:
         if not scores:
             return 0
         count = 0
@@ -11,7 +11,7 @@ class StudentAnalyzer:
         return count
 
 
-    def calculateValidAverage(self, scores: List[float]) -> float:
+    def calculate_valid_average(self, scores: List[float]) -> float:
         if not scores:
             return 0.0
         valid_scores = [score for score in scores if 0 <= score <= 10]
