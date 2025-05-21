@@ -9,3 +9,12 @@ class StudentAnalyzer:
             if 0 <= score <= 10 and score >= 8.0:
                 count += 1
         return count
+
+
+    def calculateValidAverage(self, scores: List[float]) -> float:
+        if not scores:
+            return 0.0
+        valid_scores = [score for score in scores if 0 <= score <= 10]
+        if not valid_scores:
+            return 0.0
+        return sum(valid_scores) / len(valid_scores)
