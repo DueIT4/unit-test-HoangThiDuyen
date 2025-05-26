@@ -31,17 +31,16 @@ Không cần cài đặt thư viện ngoài
 ## Hướng dẫn chạy kiểm thử
 #### Sử dụng unittest
 Mở terminal tại thư mục test và chạy lệnh sau:
+
 python -m unittest test_student_analyzer.py
 
 ## Các kiểm thử đã triển khai
 
 |               Tên hàm kiểm thử                      |               Mục đích kiểm thử                  |
 | --------------------------------------------------- | ------------------------------------------------ |
-| `test_count_excellent_students_mixed_valid_invalid` | Đếm số học sinh giỏi với danh sách               |
-|                                                     | có điểm hợp lệ và không hợp lệ                   |
+| `test_count_excellent_students_mixed_valid_invalid` | Đếm số học sinh giỏi với danh sách có điểm hợp lệ và không hợp lệ                 |
 | `test_count_excellent_students_empty_list`          | Đếm số học sinh giỏi với danh sách rỗng          |                         
-| `test_count_excellent_students_all_valid`           | Đếm số học sinh giỏi với danh sách               |
-|                                                     | cả điểm đều hợp lệ và từ 8.0 trở lên             |
+| `test_count_excellent_students_all_valid`           | Đếm số học sinh giỏi với danh sách cả điểm đều hợp lệ và từ 8.0 trở lên               |
 | `test_count_excellent_students_edge_values`         | Đếm số học sinh giỏi với danh sách biên          |
 | `test_calculate_valid_average_mixed_valid_invalid`  | Tính trung bình với điểm hợp lệ và không hợp lệ  |
 | `test_calculate_valid_average_all_valid`            | Tính trung bình với toàn bộ điểm hợp lệ          |
@@ -50,41 +49,60 @@ python -m unittest test_student_analyzer.py
 | `test_calculate_valid_average_edge_values`          | Tính trung bình của điểm biên như 0.0 và 10.0    |
 
 ## Độ bao phủ mã lệnh (Test Coverage)
-```
-Dự án đã được kiểm thử đầy đủ bằng thư viện unittest và coverage, với kết quả sau:
+| Tên file                        | Số dòng | Thiếu | Bao phủ  | Dòng thiếu |
+| ------------------------------- | ------- | ----- | -------- | ---------- |
+| `src/student_analyzer.py`       | 7       | 0     | 100%     | –          |
+| `test/test_student_analyzer.py` | 89      | 0     | 100%     | –          |
+| **Tổng cộng**                   | **96**  | **0** | **100%** | –          |
 
-Name                            Stmts   Miss  Cover   Missing
--------------------------------------------------------------
-src\student_analyzer.py             7      0   100%
-test\test_student_analyzer.py      89      0   100%
--------------------------------------------------------------
-TOTAL                              96      0   100%
-```
 #### Độ bao phủ mã đạt 100%
 
+
+
 ## Hướng dẫn kiểm tra lại độ bao phủ
-Bạn có thể tự chạy kiểm thử và đo độ bao phủ bằng cách sử dụng các lệnh sau trong terminal:
+   Bạn có thể tự chạy kiểm thử và đo độ bao phủ bằng cách sử dụng các lệnh sau trong terminal:
 
-#### Cài đặt coverage nếu chưa có
-pip install coverage
+#### Cài đặt coverage nếu chưa có:
+      pip install coverage
 
-#### Chạy kiểm thử kèm đo độ bao phủ
-coverage run -m unittest tests/test_student_analyzer.py
+#### Chạy kiểm thử kèm đo độ bao phủ:
+      coverage run -m unittest tests/test_student_analyzer.py
 
-#### Hiển thị báo cáo độ bao phủ
-coverage report -m
+#### Hiển thị báo cáo độ bao phủ:
+      coverage report -m
 
 ## Ví dụ sử dụng
-scores = [9.0, 8.5, 7.0, 11.0, -1.0]
-
-analyzer = StudentAnalyzer()
-
-#### Đếm số học sinh giỏi
-print(analyzer.count_excellent_students(scores))  
-#### Kết quả: 2
-
-#### Tính điểm trung bình hợp lệ
-print(analyzer.calculate_valid_average(scores))   
-#### Kết quả: ~8.17
-
+#### Danh sách đầu vào
+```
+   scores = [9.0, 8.5, 7.0, 11.0, -1.0]
+```
+#### Đếm số học sinh giỏi:
+```     
+   expected = 2
+   print(f"Đầu vào: {scores}")
+   print(f"Kỳ vọng: {expected} | Thực tế: {actual}")
+   self.assertEqual(actual, expected)
+   print("Kết quả đúng.")
+ ``` 
+   #### Kết quả: 
+   ```
+   Đầu vào: [9.0, 8.5, 7.0, 11.0, -1.0]
+   Kỳ vọng: 2 | Thực tế: 2
+   Kết quả đúng.
+```
+#### Tính điểm trung bình hợp lệ:
+```
+   expected = 8.17
+   actual = round(self.analyzer.calculate_valid_average(scores), 2)
+   print(f"Đầu vào: {scores}")
+   print(f"Kỳ vọng: {expected} | Thực tế: {actual}")
+   self.assertAlmostEqual(actual, expected, places=2)
+   print("Kết quả đúng.")
+```
+#### Kết quả:
+```
+   Đầu vào: [9.0, 8.5, 7.0, 11.0, -1.0]
+   Kỳ vọng: 8.17 | Thực tế: 8.17
+   Kết quả đúng.
+   ```
 #### Lưu ý: Chỉ các điểm trong khoảng [0.0, 10.0] được xem là hợp lệ. Nếu không có điểm hợp lệ, kết quả trả về là 0.0.
