@@ -24,9 +24,9 @@ project/
 
 ## Yêu cầu
 ```
-Python 3.6 trở lên
+   Python 3.6 trở lên
 
-Không cần cài đặt thư viện ngoài
+   Không cần cài đặt thư viện ngoài
 ```
 ## Hướng dẫn chạy kiểm thử
 #### Sử dụng unittest
@@ -86,9 +86,9 @@ Mở terminal tại thư mục test và chạy lệnh sau:
  ``` 
    #### Kết quả: 
    ```
-   Đầu vào: [9.0, 8.5, 7.0, 11.0, -1.0]
-   Kỳ vọng: 2 | Thực tế: 2
-   Kết quả đúng.
+      Đầu vào: [9.0, 8.5, 7.0, 11.0, -1.0]
+      Kỳ vọng: 2 | Thực tế: 2
+      Kết quả đúng.
 ```
 #### Tính điểm trung bình hợp lệ:
 ```
