@@ -22,18 +22,6 @@ project/
 ├── README.md                        # Tài liệu mô tả bài tập
 ```
 
-## Yêu cầu
-```
-   Python 3.6 trở lên
-
-   Không cần cài đặt thư viện ngoài
-```
-## Hướng dẫn chạy kiểm thử
-#### Sử dụng unittest
-Mở terminal tại thư mục test và chạy lệnh sau:
-
-      python -m unittest test_student_analyzer.py
-
 ## Các kiểm thử đã triển khai
 
 |               Tên hàm kiểm thử                      |               Mục đích kiểm thử                  |
@@ -48,6 +36,23 @@ Mở terminal tại thư mục test và chạy lệnh sau:
 | `test_calculate_valid_average_all_invalid`          | Tính trung bình với toàn bộ điểm không hợp lệ    |
 | `test_calculate_valid_average_edge_values`          | Tính trung bình của điểm biên như 0.0 và 10.0    |
 
+## Yêu cầu
+```
+   Python 3.6 trở lên
+
+   Không cần cài đặt thư viện ngoài
+```
+## Hướng dẫn chạy kiểm thử và đo độ bao phủ kiểm thử
+   Bạn có thể tự chạy kiểm thử và đo độ bao phủ bằng cách sử dụng các lệnh sau trong terminal:
+
+#### Cài đặt coverage nếu chưa có:
+      pip install coverage
+
+#### Chạy kiểm thử kèm đo độ bao phủ:
+      coverage run -m unittest discover -s test
+#### Hiển thị báo cáo độ bao phủ:
+      coverage report -m
+
 ## Độ bao phủ mã lệnh (Test Coverage)
 | Tên file                        | Số dòng | Thiếu | Bao phủ  | Dòng thiếu |
 | ------------------------------- | ------- | ----- | -------- | ---------- |
@@ -57,19 +62,6 @@ Mở terminal tại thư mục test và chạy lệnh sau:
 
 #### Độ bao phủ mã đạt 100%
 
-
-
-## Hướng dẫn kiểm tra lại độ bao phủ
-   Bạn có thể tự chạy kiểm thử và đo độ bao phủ bằng cách sử dụng các lệnh sau trong terminal:
-
-#### Cài đặt coverage nếu chưa có:
-      pip install coverage
-
-#### Chạy kiểm thử kèm đo độ bao phủ:
-      coverage run -m unittest tests/test_student_analyzer.py
-
-#### Hiển thị báo cáo độ bao phủ:
-      coverage report -m
 
 ## Ví dụ sử dụng
 #### Danh sách đầu vào
