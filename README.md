@@ -32,7 +32,7 @@ Không cần cài đặt thư viện ngoài
 #### Sử dụng unittest
 Mở terminal tại thư mục test và chạy lệnh sau:
 
-python -m unittest test_student_analyzer.py
+      python -m unittest test_student_analyzer.py
 
 ## Các kiểm thử đã triển khai
 
